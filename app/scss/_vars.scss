@@ -1,0 +1,455 @@
+$bg:#f6f9fc;
+$blue:#005bd6;
+
+
+@mixin ibg{
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+@mixin product__item-standart {
+    .product__item{
+        border: 1px solid rgb(246, 249, 252);
+        width: 314px;
+        min-height: 543px;
+        //padding: 19px 20px 25px 20px;
+        margin-bottom: 35px;
+        position: relative;
+    }
+    
+    .product__code-box{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 17px;
+        border-bottom: 1px solid rgb(246, 249, 252);
+        padding: 19px 20px 17px;
+    }
+    
+    .product__code{
+        font-size: 11px;
+        line-height: 20px;
+        color: #666;
+    }
+    
+    .product__balance{
+        font-size: 11px;
+        line-height: 20px;
+        color: #08c14d;
+    }
+    
+    .product__img-box{
+        position: relative;
+        border-bottom: 1px solid rgb(246, 249, 252);
+    }
+    
+    .nalojeniye__img{
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0,0,0,0.0);
+    
+    }
+    
+    .product__heart{
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        z-index: 3;
+        cursor: pointer;
+        width: 20px;
+        height: 18px;
+        background-image: url(../images/ico/hearth.png);
+        @include ibg;
+    }
+    
+    .product__classbox{
+        position: absolute;
+        top: 0;
+        left: 20px;
+        display: flex;
+        width: 105px;
+    }
+    
+    .product__fire{
+        padding-left: 5px;
+        svg{
+            width: 30px;
+            height: 40px;
+        }
+    }
+    
+    .product__sale{
+        svg{
+            width: 30px;
+            height: 40px;
+        }
+    }
+    
+    .product__leaf{
+        padding-left: 5px;
+        svg{
+            width: 30px;
+            height: 40px;
+        }
+    }
+    
+    
+    .product__img{
+        width: 312px;
+        height: 265px;
+        @include ibg;
+    }
+    
+    .product__info-box{
+        padding: 14px 20px 0px;
+    }
+    
+    .product__price-box{
+        padding: 0px 20px;
+    }
+    .product__info{
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 13px;
+        margin-bottom: 14px;
+        min-height: 40px;
+        color:#000;
+    }
+    
+    .product__price-piece{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+    }
+    
+    .product__price-wholesale{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+    }
+    
+    .price-text{
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+    
+    .price-piece-count,
+    .price-wholesale-count{
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 500;
+        &:after{
+            content:"\20BD"
+        }
+    }
+    
+    .product__bottom__code-box{
+        display: none;
+    }
+    
+    .product__order__basket{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 14px;
+    }
+
+    .product__basket-box-inner{
+        padding: 5px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .product__code,
+        .product__balance,
+        .product__rate,
+        .product__heart{
+            display: none;
+        }
+    }
+    
+    .product__order__box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .product__order-minus{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $blue;
+        padding: 2px 8px;
+        svg{
+            width: 14px;
+            height: 4px;
+        }
+        cursor: pointer;
+        
+        &:hover{
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6)
+        }
+    }
+    
+    .product__order-count{
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 500;
+        margin: 0px 16px;
+    }
+    
+    .product__order-plus{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $blue;
+        padding: 7px 8px;
+        svg{
+            width: 14px;
+            height: 14px;
+        }
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6)
+        }
+    }
+    
+    .product__order-link{
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 500;
+        padding: 5px 0px 8px;
+        text-align: center;
+        background-color: $blue;
+        color: #fff;
+        width: 116px;
+        height: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6)
+        }
+    }
+}
+
+@mixin product__item-mini {
+    .product__item{
+        width: 165px;
+        height: auto;
+        min-height: 420px;
+        margin-bottom: 10px;
+    }
+    
+    .product__code-box{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px 10px;
+    }
+    
+    .product__code{
+        font-size: 8px;
+        line-height: 14px;
+    }
+    
+    .product__balance{
+        font-size: 8px;
+        line-height: 14px;
+    }
+    
+    .product__heart{
+        right: 9px;
+        top: 9px;
+    }
+    
+    .product__fire{
+        left: 0px;
+        top: 0px;
+        svg{
+            width: 30px;
+            height: 40px;
+        }
+    }
+    
+    .product__img{
+        //width: 139px;
+        width: 165px;
+        height: 167px;
+    }
+    
+    .product__info-box{
+        padding: 14px 8px 0px;
+        margin-bottom: 16px;
+    }
+    
+    .product__price-box{
+        padding: 0px 8px;
+    }
+    .product__info{
+        font-size: 9px;
+        line-height: 13px;
+        margin-top: 13px;
+        margin-bottom: 14px;
+        min-height: 40px;
+    }
+    
+    .product__price-piece{
+        margin-bottom: 7px;
+    }
+    
+    .product__price-wholesale{
+        margin-bottom: 7px;
+    }
+    
+    .price-text{
+        font-size: 10px;
+        line-height: 16px;
+        font-weight: 500;
+    }
+    
+    .price-piece-count,
+    .price-wholesale-count{
+        font-size: 10px;
+        line-height: 16px;
+        font-weight: 500;
+        &:after{
+            content:"\20BD"
+        }
+    }
+    
+    .product__bottom__code-box{
+        display: none;
+    }
+    
+    .product__order__basket{
+        display: block;
+        padding-top: 14px;
+    }
+    
+    .product__basket-box{
+        padding: 0px 16px;
+    }
+    
+    .product__order__box{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .product__order-minus{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        padding: 0px 8px;
+        svg{
+            width: 10px;
+            height: 4px;
+        }
+        cursor: pointer;
+    }
+    
+    .product__order-count{
+        font-size: 16px;
+        line-height: 16px;
+        margin: 0px 10px;
+    }
+    
+    .product__order-plus{
+        width: 25px;
+        height: 25px;
+        padding: 5px 5px;
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    .product__order-link{
+        font-size: 11px;
+        line-height: 16px;
+        padding: 4px 0px 8px;
+        width: 110px;
+        height: 24px;
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+    
+    .product__basket-box-inner{
+        padding: 5px 0px;
+        
+    }
+    .product__order__box{
+        margin-left: 22px;    
+    }
+}
+
+
+@mixin product__listview {
+    .product__item.list{
+        width: 100%;
+        display: flex;
+        min-height: unset;
+        height: 100px;
+        align-items: center;
+        margin-bottom: 20px;
+        .product__code-box{
+            display: none;
+        }
+        .product__img{
+            width: 100px;
+            height: 100px;
+        }
+        .product__info{
+            width: 330px;
+        }
+        .product__price-box{
+            width: 280px;
+        }
+        .price-text{
+            width: 87px;
+        }
+        .price-wholesale-count,
+        .price-piece-count{
+            margin-left: 34px;
+        }
+        .product__bottom__code-box{
+            display: flex;
+            justify-content: space-between;
+            .product__heart{
+                position: static;
+            }
+        }
+        .product__basket-box-inner{
+            padding-right: 0px;
+            .product__code,
+            .product__balance,
+            .product__heart{
+                display: block;
+                margin-bottom: 10px;
+            }
+            .product__heart{
+                position: static;
+            }
+        }
+        .product__basket-box{
+            width: 250px;
+        }
+        .product__img-box{
+            .product__heart{
+                display: none;
+            }
+            .product__fire{
+                display: none;
+            }
+            .product__sale{
+                display: none;
+            }
+            .product__leaf{
+                display: none;
+            }
+        }
+    }
+}
